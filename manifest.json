@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Hacking",
+  "version": "1.0",
+  "description": "DANGER",
+  "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": [
+    "code/toggle.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
